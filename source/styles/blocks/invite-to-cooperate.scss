@@ -1,0 +1,9 @@
+.invite-to-cooperate__title {
+  @include title-uppercase;
+  line-height: 20px;
+}
+
+.invite-to-cooperate__address {
+  @include text;
+  line-height: 20px;
+}

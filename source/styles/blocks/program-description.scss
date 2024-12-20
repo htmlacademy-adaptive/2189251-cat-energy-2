@@ -1,0 +1,8 @@
+.program-description__title {
+  @include title-simple;
+  line-height: 40px;
+}
+
+.program-description__item {
+  @include text;
+}

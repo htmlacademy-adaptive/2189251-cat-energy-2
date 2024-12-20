@@ -17,7 +17,7 @@
   <header class="main-header">
     <nav class="main-nav">
       <div class="container">
-        <a class="logo logo--nav " href="#">
+        <a class="logo logo--nav main-nav__link " href="#">
           <img src="#" width="33" height="38" alt="Кэт Энерджи">
         </a>
         <ul class="main-nav__list">
@@ -34,28 +34,33 @@
     <h1 class="visually-hidden">Пищевая продукция для кошек "Кэт Энерджи"</h1>
 
     <section class="food-program">
+      <h2 class="visually-hidden">Описание и подбор программы функционального питания для котов</h2>
       <div class="container">
-        <h2 class="food-program__title">Функциональное питание для котов</h2>
-        <picture>
-          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-banner@1x.png 1x, images/index-banner@2x.png 2x">
-          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-banner-tablet@1x.png 1x, images/index-banner-tablet@2x.png 2x">
-          <img class="food-program__picture" src="images/index-banner-mobile@1x.png" srcset="images/index-banner-mobile@2x.png" width="280" height="270" alt="Упаковка кошачей еды Кэт Энерджи">
-        </picture>
-        <p class="food-program__text">Занялся собой? Займись котом!</p>
-        <a class="button food-program__button" href="#">Подобрать программу</a>
+        <div class="food-program__choice">
+          <h2 class="food-program__choice-title">Функциональное питание для котов</h2>
+          <picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/index-banner@1x.png 1x, images/index-banner@2x.png 2x">
+            <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/index-banner-tablet@1x.png 1x, images/index-banner-tablet@2x.png 2x">
+            <img class="food-program__picture" src="images/index-banner-mobile@1x.png" srcset="images/index-banner-mobile@2x.png" width="280" height="270" alt="Упаковка кошачей еды Кэт Энерджи">
+          </picture>
+          <p class="food-program__choice-subtitle">Занялся собой? Займись котом!</p>
+          <a class="button food-program__choice-button" href="#">Подобрать программу</a>
+        </div>
+
         <ol class="food-program__list">
           <li class="food-program__type">
-            <h2 class="food-program__title food-program__title--slim">Похудение</h2>
+            <h2 class="food-program__type-title">Похудение</h2>
             <p class="food-program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="food-program__link" href="#">Каталог slim</a>
           </li>
           <li class="food-program__type">
-            <h2 class="food-program__title food-program__title--gain-weight">Набор массы</h2>
+            <h2 class="food-program__type-title">Набор массы</h2>
             <p class="food-program__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="food-program__link" href="#">Каталог pro</a>
           </li>
-        </ol>
+        </ol>s
+
         <div class="program-description">
           <h2 class="program-description__title">Как это работает</h2>
           <ul class="program-description__list">

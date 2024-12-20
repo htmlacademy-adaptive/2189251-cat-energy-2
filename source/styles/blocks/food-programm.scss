@@ -1,0 +1,38 @@
+
+.food-program__choice {
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+.food-program__choice-title {
+  @include title-simple;
+  color: #ffffff;
+}
+
+.food-program__choice-subtitle {
+  @include title-uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.food-program__choice-button {
+  @include button;
+  padding: 10px 64px;
+}
+
+.food-program__type {
+  background-color: #f2f2f2;
+}
+
+.food-program__type-title {
+  @include title-uppercase;
+  color: #000000;
+  font-size: 24px;
+  line-height: 37px;
+}
+
+.food-program__link {
+  @include title-uppercase;
+  color: #000000;
+  text-decoration: none;
+}

@@ -1,0 +1,27 @@
+/* stylelint-disable @stylistic/no-missing-end-of-source-newline */
+.newsletter__title {
+  @include title-simple;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.newsletter__text {
+  @include title-simple;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.newsletter__form {
+  input {
+    @include title-uppercase;
+    font-size: 20px;
+    color: #444444;
+    line-height: 30px;
+  }
+}
+
+.newsletter__button {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 15px 82px;
+}

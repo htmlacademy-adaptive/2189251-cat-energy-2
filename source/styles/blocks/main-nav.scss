@@ -1,0 +1,17 @@
+
+
+.main-nav__item {
+  @include title-uppercase;
+  color: #000000;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #000000;
+}
