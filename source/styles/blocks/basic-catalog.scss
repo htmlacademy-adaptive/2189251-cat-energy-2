@@ -38,6 +38,17 @@
     font-size: 12px;
     line-height: 16px;
   }
+
+  position: relative;
+  padding: 78px 59px 8px;
+
+  &::before {
+    @include pseudo-element-bg ($url: url("../../icons/stack.svg#plus"));
+    width: 30px;
+    height: 30px;
+    top: 25%;
+    left: 30%;
+  }
 }
 
 .basic-catalog__view-all-button {
@@ -63,9 +74,21 @@
   }
 }
 
+
 .basic-catalog__gift {
+
+  background-image: url("../../images/catalog-background-bag-mobile@1x.png");
   background-color: hsla(97, 53%, 47%, 0.85);
+  background-position: center;
+  background-size: 280px 290px;
+  background-repeat: no-repeat;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  width: 280px;
+  height: 290px;
+
+  &::after {
+    @include pseudo-element-bg($url: url("../../icons/stack.svg#icon-gift"));
+  }
 }

@@ -40,3 +40,27 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+
+@mixin pseudo-element-bg ( $width: 60px, $height: 60px,$url, $background-size:100%) {
+  content: "";
+  position: absolute;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  width: $width;
+  height: $height;
+  display: block;
+  background-image: $url;
+  background-size: $background-size;
+}
+
+@mixin pseudo-element-mask ($background-color: #000000,$url) {
+  content: "";
+  position: absolute;
+  background-color: $background-color;
+  display: block;
+  mask-image: $url;
+  mask-position: 50%;
+  mask-repeat: no-repeat;
+  // flex-shrink: 0;
+}

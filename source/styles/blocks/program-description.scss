@@ -5,4 +5,25 @@
 
 .program-description__item {
   @include text;
+  padding: 20px;
+  padding-left: 100px;
+  position: relative;
+  list-style: none;
+}
+
+.program-description__item--useful::before {
+  @include pseudo-element-bg ($url: url("../../icons/stack.svg#program-description-useful"));
+}
+
+.program-description__item--powder::before {
+  @include pseudo-element-bg ($url: url("../../icons/stack.svg#program-description-powder"));
+}
+
+.program-description__item--food::before {
+  @include pseudo-element-bg ($url: url("../../icons/stack.svg#program-description-food"));
+}
+
+
+.program-description__item--time::before {
+  @include pseudo-element-bg ($url: url("../../icons/stack.svg#program-description-time"));
 }

@@ -17,8 +17,14 @@
   <header class="main-header">
     <nav class="main-nav">
       <div class="container">
-        <a class="main-nav__logo-icon main-nav__logo-icon--full " href="index.html"><img src="#" width="33" height="38" alt="логоиконка Кэт Энерджи"></a>
-        <a class="logo-text" href="index.html"><img src="#" width="3101" height="18" alt="лого-текст Кэт Энерджи"></a>
+        <a class="logo logo--nav main-nav__link " href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-pic-desktop.svg" width="70" height="60" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/logo-pic-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img src="images/logo-pic-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+          <img class="logo-text" src="images/logo-text.svg" width="101" height="18" alt="компания Cat Energy">
+        </a>
         <ul class="main-nav__list">
           <li class="main-nav__item "><a class="main-nav__link main-nav__link--current" href="index.html">Главная</a></li>
           <li class="main-nav__item "><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
@@ -265,33 +271,32 @@
       </div>
       <div class="map-picture">
         <picture>
-          <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x">
-          <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
-          <img src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Адрес на карте">
+          <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/map-and-logo-desktop@1x.png 1x, images/map-and-logo-desktop@2x.png 2x">
+          <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-and-logo-tablet@1x.png 1x, images/map-and-logo-tablet@2x.png 2x">
+          <img src="images/map-and-logo-mobile@1x.png" srcset="images/map-and-logo-mobile@2x.png 2x" width="320" height="362" alt="Адрес на карте">
         </picture>
-        <img class="logo" src="#" width="57" height="53" alt="Логотип">
       </div>
     </section>
 
     <div class="container">
-      <a class="page-footer__logo logo" href="#"><img src="#" width="128" height="24" alt="логотип"></a>
+
+      <a class="page-footer__logo logo" href="#"><img src="images/logo-text.svg" width="128" height="24" alt="логотип"></a>
       <ul class="social">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Вконтакте</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в Ютубе</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+          <a class="social__link social__link--telegram" href="#"><span class="visually-hidden">Мы в Телеграм</span></a>
         </li>
       </ul>
-      <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <div>
-          <img src="#" width="113" height="20" alt="HTML Academy link">
-          <img src="#" width="27" height="34" alt="HTML Academy logo">
-        </div>
-      </a>
+      <div class="page-footer__copyright">
+        <a class="page-footer__copyright-link page-footer__copyright-link--text" href="https://htmlacademy.ru/intensive/adaptive"><span>HTML Academy</span>
+        </a>
+        <a class="page-footer__copyright-link page-footer__copyright-link--pic" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Академия лого рисунок</span></a>
+      </div>
     </div>
 
   </footer>

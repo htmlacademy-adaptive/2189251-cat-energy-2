@@ -20,6 +20,10 @@
   padding: 10px 64px;
 }
 
+.food-program__list {
+  list-style: none;
+}
+
 .food-program__type {
   background-color: #f2f2f2;
 }
@@ -31,8 +35,46 @@
   line-height: 37px;
 }
 
+.food-program__type--slim h2 {
+  padding: 30px 80px 30px 90px;
+  position: relative;
+}
+
+.food-program__type--slim h2::before {
+  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-slim"));
+  width: 50px;
+  height: 53px;
+  top: 21px;
+  left: 20px;
+}
+
+.food-program__type--gain-weight h2 {
+  padding: 30px 52px 30px 91px;
+  position: relative;
+}
+
+.food-program__type--gain-weight h2::before {
+  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-gain-weight"));
+  width: 67px;
+  height: 50px;
+  top: 24px;
+  left: 13px;
+}
+
 .food-program__link {
   @include title-uppercase;
   color: #000000;
+  height: 24px;
   text-decoration: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.food-program__link::after {
+  @include pseudo-element-mask($url: url("../../icons/stack.svg#arrow"));
+
+  width: 24px;
+  height: 12px;
+  top: 25%;
+  left: 115%;
 }
