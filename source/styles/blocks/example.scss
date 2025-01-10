@@ -2,9 +2,23 @@
   background-color: #eaeaea;
 }
 
+.example .container {
+  padding: 25px 20px 40px;
+}
+
+.example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
 .example__title {
   @include title-simple;
   line-height: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .example__list-data {
@@ -21,4 +35,93 @@
   @include title-uppercase;
   font-size: 14px;
   line-height: 20px;
+}
+
+
+.example__slider {
+  position: relative;
+  width: 280px; /* Ширина контейнера */
+  height: 256px; /* Высота контейнера */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.example__images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.example__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.example__image--before {
+  clip-path: inset(0 50% 0 0); /* Показываем только левую половину */
+}
+
+.slider-handle {
+  position: absolute;
+  top: 0;
+  left: 49%;
+  width: 5px; /* Ширина линии слайдера */
+  height: 100%;
+  border-radius: 2px;
+  background-color: #666666; /* Цвет линии слайдера */
+  cursor: ew-resize; /* Курсор при наведении */
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 2px #666666;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    mask-position: 50%;
+    mask-repeat: no-repeat;
+    flex-shrink: 0;
+    width: 24px;
+    height: 18px;
+    display: block;
+    mask-image: url("../../icons/slider-handle.svg");
+    background-color: #666666;
+  }
+
+  &:hover::after,
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:hover::before {
+    border-color: #68b738;
+  }
+
+  &:active::after,
+  &:active {
+    background-color: rgba(94, 170, 47, 0.6);
+  }
+
+  &:active::before {
+    border-color: rgba(94, 170, 47, 0.6);
+  }
 }

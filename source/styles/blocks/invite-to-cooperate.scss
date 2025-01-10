@@ -1,9 +1,26 @@
+
+.invite-to-cooperate {
+  padding: 26px 20px;
+  min-height: 112px;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
+}
+
 .invite-to-cooperate__title {
   @include title-uppercase;
   line-height: 20px;
+  margin: 0;
+  padding: 0;
+  max-width: 140px;
 }
 
 .invite-to-cooperate__address {
   @include text;
   line-height: 20px;
+  margin: 0;
+  padding: 0;
+  max-width: 140px;
 }

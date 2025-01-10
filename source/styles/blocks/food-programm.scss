@@ -1,11 +1,103 @@
 
 .food-program__choice {
-  background-color: rgba(104, 183, 56, 0.85);
+  position: relative;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 320px 302px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-cat-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-size: auto 302px;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-cat-mobile@2x.png");
+    }
+
+    .promo-pic {
+      position: absolute;
+      top: 165px;
+      left: 20px;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 770px;
+    color: #000000;
+    background-color: transparent;
+    text-align: left;
+
+    .promo-pic {
+      position: absolute;
+      top: 264px;
+      left: 30px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -200px 0 0 50%;
+      z-index: -2;
+      background-size: 720px 694px;
+      background-color: #63a63b;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-cat-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-size: 720px 694px;
+        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-cat-desktop@2x.png");
+      }
+    }
+  }
 }
+
+.food-program__choice-container {
+
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+
+  @include title-simple;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding: 10px 234px 0 117px;
+    min-width: 414px;
+    min-height: 264px;
+
+    .food-program__choice-button {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 582px;
+    padding: 20px 610px 95px 80px;
+  }
+}
+
 
 .food-program__choice-title {
   @include title-simple;
   color: #ffffff;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
 }
 
 .food-program__choice-subtitle {
@@ -13,19 +105,68 @@
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .food-program__choice-button {
   @include button;
-  padding: 10px 64px;
+  padding: 10px;
+  width: 280px;
+  min-height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 242px;
+    min-height: 54px;
+    padding: 14px 24px 14px 26px;
+  }
 }
 
 .food-program__list {
   list-style: none;
+  margin: 0 auto;
+  padding: 20px;
+
+  & h2 {
+    margin: 0;
+  }
+
+  & p {
+    margin: 0 0 42px;
+    padding: 0 20px;
+  }
+
+  // @media (min-width: $tablet-width) {
+  //   // display: grid;
+  //   // grid-template-columns: 1fr 1fr;
+  //   // gap: 80px;
+  // }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .food-program__type {
   background-color: #f2f2f2;
+  margin-bottom: 20px;
 }
 
 .food-program__type-title {
@@ -33,31 +174,48 @@
   color: #000000;
   font-size: 24px;
   line-height: 37px;
+  padding: 30px 20px 30px 90px;
 }
 
 .food-program__type--slim h2 {
-  padding: 30px 80px 30px 90px;
   position: relative;
 }
 
+
 .food-program__type--slim h2::before {
-  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-slim"));
-  width: 50px;
-  height: 53px;
-  top: 21px;
+  @include pseudo-element-figure(50px, 50px);
+  border-radius: 50%;
+  background-color: #68b738;
+  top: 24px;
   left: 20px;
 }
 
+.food-program__type--slim h2::after {
+  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-sitting"));
+  width: 36px;
+  height: 53px;
+  top: 21px;
+  left: 27px;
+  z-index: 100;
+}
+
 .food-program__type--gain-weight h2 {
-  padding: 30px 52px 30px 91px;
   position: relative;
 }
 
 .food-program__type--gain-weight h2::before {
-  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-gain-weight"));
-  width: 67px;
-  height: 50px;
+  @include pseudo-element-figure(50px, 50px);
+  border-radius: 50%;
+  background-color: #68b738;
   top: 24px;
+  left: 21px;
+}
+
+.food-program__type--gain-weight h2::after {
+  @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-walking"));
+  width: 67px;
+  height: 28px;
+  top: 35px;
   left: 13px;
 }
 
@@ -67,14 +225,22 @@
   height: 24px;
   text-decoration: none;
   position: relative;
-  padding-left: 20px;
+  padding: 15px 0 20px 20px;
 }
 
 .food-program__link::after {
   @include pseudo-element-mask($url: url("../../icons/stack.svg#arrow"));
-
+  background-color: #000000;
   width: 24px;
   height: 12px;
-  top: 25%;
+  top: 37%;
   left: 115%;
+}
+
+.food-program__link:hover::after {
+  width: 32px;
+}
+
+.food-program__link:active::after {
+  background-color: rgba(0, 0, 0, 0.3);
 }

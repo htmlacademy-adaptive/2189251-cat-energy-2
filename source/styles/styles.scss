@@ -6,14 +6,20 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/button.scss";
-@import "./blocks/basic-catalog.scss";
-@import "./blocks/example.scss";
-@import "./blocks/food-programm.scss";
-@import "./blocks/invite-to-cooperate.scss";
+
+
+@import "./blocks/page.scss";
 @import "./blocks/main-nav.scss";
-@import "./blocks/newsletter.scss";
+@import "./blocks/button.scss";
+@import "./blocks/food-programm.scss";
 @import "./blocks/program-description.scss";
-@import "./blocks/page-footer.scss";
+@import "./blocks/example.scss";
+@import "./blocks/invite-to-cooperate.scss";
 @import "./blocks/social.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/basic-catalog.scss";
+@import "./blocks/product-card.scss";
+@import "./blocks/main-catalog.scss";
+@import "./blocks/newsletter.scss";
+@import "./blocks/map.scss";
 // styles.scss
