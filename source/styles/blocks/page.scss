@@ -1,0 +1,26 @@
+.page__body-wrapper {
+
+  height: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (max-width: $mobile-width) {
+
+    width: 320px;
+    margin-top: -9px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: -1px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: -2px;
+  }
+}

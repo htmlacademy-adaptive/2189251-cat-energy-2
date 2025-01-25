@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Рузанна А.](https://up.htmlacademy.ru/adaptive-individual/2/user/2189251).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Картавый.](https://htmlacademy.ru/profile/artem_k).
 
 ---
 

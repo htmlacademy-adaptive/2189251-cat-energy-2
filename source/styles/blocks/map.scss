@@ -1,0 +1,27 @@
+.map {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.map__in-map {
+  width: 320px;
+  height: 362px;
+  border: none;
+  display: block;
+
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 400px;
+  }
+}
