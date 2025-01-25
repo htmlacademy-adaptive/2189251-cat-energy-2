@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: 320px 302px;
+    margin-bottom: 20px;
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-cat-mobile@1x.png");
 
     @media (min-resolution: 2dppx) {
@@ -17,7 +18,7 @@
 
     .promo-pic {
       position: absolute;
-      top: 165px;
+      top: 167px;
       left: 20px;
       z-index: 1;
     }
@@ -31,17 +32,28 @@
 
     .promo-pic {
       position: absolute;
-      top: 264px;
-      left: 30px;
+      top: 262px;
+      left: 31px;
       z-index: -1;
     }
   }
 
+
   @media (min-width: $desktop-width) {
+    & {
+      min-height: 580px;
+    }
+
+    .promo-pic {
+      position: absolute;
+      top: 26px;
+      left: 557px;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      inset: -200px 0 0 50%;
+      inset: -116px 0 5px 50%;
       z-index: -2;
       background-size: 720px 694px;
       background-color: #63a63b;
@@ -68,18 +80,15 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 10px 234px 0 117px;
-    min-width: 414px;
-    min-height: 264px;
-
-    .food-program__choice-button {
-      margin-top: 30px;
-    }
+    padding: 34px 100px 0 119px;
+    min-height: 344px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 582px;
+    min-height: 300px;
     padding: 20px 610px 95px 80px;
+    margin-left: 110px;
   }
 }
 
@@ -90,13 +99,20 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin-bottom: 2px;
+  margin-bottom: 25px;
+  margin-top: 27px;
 
   @media (min-width: $tablet-width) {
     color: #000000;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 88px;
+    margin-bottom: 39px;
+    margin-right: 110px;
+    min-width: 414px;
   }
 }
 
@@ -105,12 +121,19 @@
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
-  margin-top: 20px;
+  margin-top: 0;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     color: #000000;
     font-size: 20px;
     line-height: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
   }
 }
 
@@ -121,26 +144,42 @@
   min-height: 40px;
   font-size: 16px;
   line-height: 20px;
-
-  @media (max-width: $mobile-width) {
-    margin-top: auto;
-    margin-bottom: 0;
-  }
+  margin-top: auto;
+  margin-bottom: 0;
 
 
   @media (min-width: $tablet-width) {
+    margin-top: 33px;
     font-size: 20px;
     line-height: 26px;
     width: 242px;
     min-height: 54px;
     padding: 14px 24px 14px 26px;
+    align-self: flex-start;
+  }
+}
+
+.food-program__catalog {
+  @media (min-width: $tablet-width) {
+    margin-top: 81px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
   }
 }
 
 .food-program__list {
   list-style: none;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+
 
   & h2 {
     margin: 0;
@@ -151,96 +190,452 @@
     padding: 0 20px;
   }
 
-  // @media (min-width: $tablet-width) {
-  //   // display: grid;
-  //   // grid-template-columns: 1fr 1fr;
-  //   // gap: 80px;
-  // }
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 20px 0;
+    gap: 30px;
+  }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    width: 1220px;
+    margin-bottom: 68px;
+    padding: 0;
   }
 }
 
 .food-program__type {
   background-color: #f2f2f2;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 372px;
+    background-size: 100%;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 374px;
+    width: 570px;
+  }
 }
 
-.food-program__type-title {
+h2.food-program__type-title {
   @include title-uppercase;
   color: #000000;
   font-size: 24px;
   line-height: 37px;
   padding: 30px 20px 30px 90px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 76px 0 24px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 50px;
+    padding: 74px 25px 24px 214px;
+  }
 }
 
-.food-program__type--slim h2 {
+.food-program__type--slim {
   position: relative;
 }
 
 
-.food-program__type--slim h2::before {
+.food-program__type::before {
   @include pseudo-element-figure(50px, 50px);
   border-radius: 50%;
   background-color: #68b738;
   top: 24px;
   left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 200px;
+    top: 91px;
+    left: 445px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+    top: 44px;
+    left: 51px;
+  }
 }
 
-.food-program__type--slim h2::after {
+.food-program__type--slim::after {
   @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-sitting"));
   width: 36px;
   height: 53px;
-  top: 21px;
+  top: 20px;
   left: 27px;
   z-index: 100;
+
+  @media (min-width: $tablet-width) {
+    width: 140px;
+    height: 194px;
+    top: 80px;
+    left: 475px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: 38px;
+    left: 67px;
+  }
 }
 
-.food-program__type--gain-weight h2 {
+.food-program__type--gain-weight {
   position: relative;
 }
 
-.food-program__type--gain-weight h2::before {
-  @include pseudo-element-figure(50px, 50px);
-  border-radius: 50%;
-  background-color: #68b738;
-  top: 24px;
-  left: 21px;
-}
-
-.food-program__type--gain-weight h2::after {
+.food-program__type--gain-weight::after {
   @include pseudo-element-bg($url: url("../../icons/stack.svg#cat-walking"));
   width: 67px;
   height: 28px;
   top: 35px;
   left: 13px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    top: 90px;
+    left: 411px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 56px;
+    top: 64px;
+    left: 33px;
+  }
 }
+
+.food-program__description {
+  margin: 0 auto;
+  list-style: none;
+  width: 320px;
+  padding-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    min-height: 735px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    min-height: 400px;
+    margin-bottom: 13px;
+  }
+}
+
+.food-program__description-title {
+  @include title-simple;
+  line-height: 40px;
+  margin: 21px 25px 39px 21px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 25px 25px 64px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1995px;
+    text-align: left;
+    margin-bottom: 65px;
+  }
+}
+
+.food-program__description-list {
+
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  color: #444444;
+  list-style: none;
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px 153px;
+    padding-left: 0;
+    counter-reset: num;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1224px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0;
+    counter-reset: num;
+    margin: 0;
+    font-size: 16px;
+
+
+    .food-program__description-item--useful {
+      margin-right: 94px;
+      flex: 0 0 230px;
+    }
+
+    .food-program__description-item--powder {
+      flex: 0 0 246px;
+      margin-right: 79px;
+    }
+
+    .food-program__description-item--food {
+      flex: 0 0 248px;
+      margin-right: auto;
+    }
+
+    .food-program__description-item--time {
+      flex: 0 0 250px;
+      // flex: 1;
+    }
+  }
+}
+
+.food-program__description-item {
+  @include text;
+  padding: 0 20px 0 80px;
+  position: relative;
+  list-style: none;
+  width: 300px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 280px;
+    width: 230px;
+  }
+}
+
+.food-program__description-item p {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: 10;
+    top: 117px;
+    left: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+p.food-program__text {
+  margin-bottom: 31px;
+  margin-left: 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 392px;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 52px;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 507px;
+    margin-bottom: 18px;
+  }
+}
+
+.food-program__description-item::after {
+  @media (min-width: $tablet-width) {
+
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: -33px;
+    right: 5px;
+
+    @include title-simple;
+    color: #f2f2f2;
+    text-align: center;
+    line-height: 280px;
+    font-size: 280px;
+  }
+}
+
+.food-program__description-item--useful {
+  &::before {
+    @include pseudo-element-bg ($url: url("../../icons/stack.svg#icon-useful"));
+    background-color: #68b738;
+    background-size: 30px 32px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 7px;
+    }
+  }
+}
+
+.food-program__description-item--powder {
+  &::before {
+    @include pseudo-element-bg ($url: url("../../icons/stack.svg#icon-powder"));
+    background-color: #68b738;
+    background-size: 26px 29px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      left: 1px;
+      top: 7px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: -15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 1px;
+    }
+  }
+}
+
+.food-program__description-item--food {
+  &::before {
+    @include pseudo-element-bg ($url: url("../../icons/stack.svg#icon-eat"));
+    background-color: #68b738;
+    background-size: 25px 30px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 7px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: -16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 1px;
+    }
+  }
+}
+
+.food-program__description-item--time {
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+
+  &::before {
+    @include pseudo-element-bg ($url: url("../../icons/stack.svg#icon-time"));
+    background-color: #68b738;
+    background-size: 26px 31px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      left: 1px;
+      top: 7px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      right: -1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 1px;
+    }
+  }
+}
+
 
 .food-program__link {
   @include title-uppercase;
   color: #000000;
-  height: 24px;
+
   text-decoration: none;
   position: relative;
-  padding: 15px 0 20px 20px;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
-.food-program__link::after {
-  @include pseudo-element-mask($url: url("../../icons/stack.svg#arrow"));
-  background-color: #000000;
-  width: 24px;
-  height: 12px;
-  top: 37%;
-  left: 115%;
+.food-program__link-wrapper {
+  display: inline-flex;
+  padding: 4px 0;
+  margin-left: 7px;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  min-width: 161px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 54px;
+    padding-bottom: 0;
+    margin: 0;
+  }
 }
 
-.food-program__link:hover::after {
-  width: 32px;
+.food-program__link-wrapper:hover {
+  cursor: pointer;
+
+  svg.arrow {
+    width: 32px;
+  }
 }
 
-.food-program__link:active::after {
-  background-color: rgba(0, 0, 0, 0.3);
+.food-program__link-wrapper:active {
+  .food-program__link {
+    opacity: 0.3;
+  }
+
+  svg.arrow {
+    width: 32px;
+    opacity: 0.3;
+  }
+}
+
+.food-program__example {
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }

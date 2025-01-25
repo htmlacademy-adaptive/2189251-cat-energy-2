@@ -1,3 +1,13 @@
+.map {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .map__in-map {
   width: 320px;
   height: 362px;

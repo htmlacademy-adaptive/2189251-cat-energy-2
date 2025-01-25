@@ -14,6 +14,7 @@
   color: $color;
   line-height: $line-height;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 @mixin title-simple ($font: $secondary-font,$font-size: 36px, $color: #000000, $line-height: 36px) {
@@ -21,6 +22,7 @@
   font-size: $font-size;
   color: $color;
   line-height: $line-height;
+  font-weight: 400;
 }
 
 @mixin text ($font: $primary-font, $font-size: 14px, $color: #444444, $line-height: 18px) {
@@ -74,6 +76,4 @@
   mask-image: $url;
   mask-position: 50%;
   mask-repeat: no-repeat;
-
-  // flex-shrink: 0;
 }

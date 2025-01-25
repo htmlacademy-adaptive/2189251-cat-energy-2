@@ -15,7 +15,42 @@ navToggle.addEventListener('click', () => {
 });
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// const container = document.querySelector('.slider-container');
+// const line = document.querySelector('.slider-line');
+// const image2 = document.querySelectorAll('.slider-image')[1];
+
+// let isResizing = false;
+
+// line.addEventListener('mousedown', (e) => {
+//   isResizing = true;
+//   e.preventDefault();
+// });
+
+// document.addEventListener('mousemove', (e) => {
+//   if (!isResizing) {
+//     return;
+//   }
+
+//   const containerRect = container.getBoundingClientRect();
+//   const x = Math.max(0, Math.min(e.clientX - containerRect.left, containerRect.width));
+//   const percent = (x / containerRect.width) * 100;
+
+//   line.style.left = `${percent}%`;
+//   image2.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+// });
+
+// document.addEventListener('mouseup', () => {
+//   isResizing = false;
+// });
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //скрипт для слайдера главной страницы
+
+
 const slider = document.getElementById('slider-handle');
 const imageRight = document.querySelector('.example__image--before');
 

@@ -1,11 +1,11 @@
 .social {
   width: 280px;
-  min-height: 24px;
   margin: 0;
-  padding: 18px;
+  padding: 20px 40px 17px;
   list-style: none;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   border-top: solid 1px #d9d9d9;
@@ -13,6 +13,7 @@
 
   @media (min-width: $tablet-width) {
     border: none;
+    padding: 0 0 0 38px;
   }
 }
 
