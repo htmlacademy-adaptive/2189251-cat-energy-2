@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 }
 
@@ -23,6 +23,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to top, #eaeaea 74%, transparent 50%);
     border-top: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -178,6 +179,10 @@
       margin: 0;
       left: 16px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #eaeaea;
   }
 }
 
