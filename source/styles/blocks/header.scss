@@ -1,21 +1,26 @@
 
-.main-nav {
+.header {
+  width: 100%;
+}
+
+.header__nav {
   position: relative;
-  width: 320px;
   margin: 0 auto;
 
 
   @media (max-width: $mobile-width) {
-    padding: 14px 20px 10px;
+    width: 279px;
+    margin: 0 auto;
+    padding: 13px 0 10px;
     display: grid;
-    grid-template-columns: 1fr 34px;
+    grid-template-columns: 1fr 24px;
     gap: 65px;
   }
 
   @media (min-width: $tablet-width) {
     width: 708px;
     min-height: 50px;
-    margin: 25px 35px 0 30px;
+    margin: 25px auto 0;
     padding: 0;
     display: grid;
     grid-template-columns: 174px 1fr;
@@ -24,14 +29,13 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 55px;
-    margin-left: 110px;
-    width: 1220px;
     grid-template-columns: 202px 1fr;
     gap: 543px;
+    width: 1220px;
   }
 }
 
-.main-nav__logo {
+.header__nav-logo {
   display: grid;
 
   @media (max-width: $mobile-width) {
@@ -40,7 +44,7 @@
     gap: 56px;
     place-items: center center;
 
-    .main-nav__toggle {
+    .header__nav-toggle {
       display: block;
     }
   }
@@ -51,7 +55,7 @@
     place-items: center center;
     width: 174;
 
-    .main-nav__toggle {
+    .header__nav-toggle {
       display: none;
     }
   }
@@ -68,10 +72,10 @@
   }
 }
 
-.main-nav__toggle {
+.header__nav-toggle {
   position: absolute;
   top: 20;
-  right: 20;
+  right: 0;
   z-index: 2;
   display: block;
   width: 24px;
@@ -86,7 +90,7 @@
 }
 
 
-.main-nav--closed .main-nav__toggle::before {
+.header__nav--closed .header__nav-toggle::before {
   content: "";
   position: absolute;
   top: 2px;
@@ -97,7 +101,7 @@
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
-.main-nav--opened .main-nav__toggle {
+.header__nav--opened .header__nav-toggle {
   &::before,
   &::after {
     content: "";
@@ -119,7 +123,7 @@
   }
 }
 
-.main-nav__list {
+.header__nav-list {
 
   margin: 0;
   padding: 0;
@@ -135,7 +139,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    .main-nav--opened & {
+    .header__nav--opened & {
       position: absolute;
       width: inherit;
       top: 64px;
@@ -158,7 +162,7 @@
       }
     }
 
-    .main-nav--closed & {
+    .header__nav--closed & {
       display: none;
     }
   }
@@ -175,13 +179,13 @@
     line-height: 30px;
     width: 475px;
 
-    &.main-nav__list--index a {
+    &.header__nav-list--index a {
       color: #ffffff;
     }
   }
 }
 
-.main-nav li {
+.header__nav li {
   position: relative;
 
   &::after {
@@ -194,6 +198,10 @@
     background-color: #68b738;
     transform: scaleX(0);
     transition: transform 0.2s;
+
+    @media (min-width: $desktop-width) {
+      background-color: #ffffff;
+    }
   }
 
   &:hover::after {
