@@ -1,12 +1,12 @@
 
+
 .invite-to-cooperate {
-  padding: 26px 20px;
-  min-height: 112px;
+  padding: 26px 0;
   display: flex;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
-    padding: 60px 70px;
+    padding: 60px 40px;
     min-height: 200px;
   }
 
@@ -15,7 +15,7 @@
     position: absolute;
     width: 565px;
     top: 96px;
-    left: 110px;
+    left: 0;
     padding: 61px 40px 60px;
     min-height: 78px;
   }

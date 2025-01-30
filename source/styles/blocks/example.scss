@@ -1,53 +1,46 @@
-.example {
-  background-color: #eaeaea;
-}
 
 .example .container {
-  padding: 25px 20px 40px;
+  padding: 25px 0 40px;
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 0;
-  }
+  // @media (min-width: $tablet-width) {
+
+  // }
 
   @media (min-width: $desktop-width) {
-    // margin-bottom: 20px;
+    padding: 0;
   }
 }
 
 .example__container {
   @media (min-width: $tablet-width) {
-    background-color: #ffffff;
+
     border-top: 1px solid #e6e6e6;
-    height: 600px;
+    height: 1081px;
     margin: 0;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, #eaeaea 462px, transparent 50%);
+
     border-top: none;
     display: grid;
+    height: 600px;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 40px;
   }
 }
 
 .example__content {
-  margin-bottom: 20px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 21px;
+  }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 3px;
-  }
-}
 
-.food-program__background-additional {
-  @media (min-width: $tablet-width) {
-    height: 462px;
-    background-color: #eaeaea;
+    margin-bottom: 0;
   }
 
-  @media (min-width: $desktop-width) {
-    height: 0;
-  }
+  // @media (min-width: $desktop-width) {
+  // }
 }
 
 .example__title {
@@ -55,19 +48,21 @@
   line-height: 40px;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 38px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 0 10px;
     padding-bottom: 60px;
+    padding-top: 20px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    margin-left: 90px;
-  }
+  // @media (min-width: $desktop-width) {
+
+  // }
 }
 
 .example__text {
@@ -75,16 +70,13 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
-    padding-left: 10px;
     font-size: 16px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 439px;
-    margin-left: 81px;
+    width: 433px;
     margin-top: 85px;
-    padding-left: 7px;
   }
 }
 
@@ -99,7 +91,6 @@
     flex-direction: column;
     width: 366px;
     margin-top: 18px;
-    margin-left: 90px;
   }
 }
 
@@ -108,6 +99,10 @@
   align-items: flex-start;
   gap: 32px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 44px;
+  }
 
   @media (min-width: $desktop-width) {
     width: 100%;
@@ -130,7 +125,6 @@
     width: 162px;
     height: 73px;
     margin-top: 34px;
-    margin-left: 10px;
   }
 
   @media (min-width: $desktop-width) {
@@ -203,7 +197,7 @@
     align-items: end;
     gap: 12px;
     padding-top: 29px;
-    margin-right: 11px;
+    padding-right: 1px;
   }
 
   @media (min-width: $desktop-width) {
@@ -231,8 +225,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
-    left: -40px;
+    top: 20px;
+    left: 15px;
   }
 }
 
@@ -259,11 +253,11 @@
   clip-path: inset(0 0 0 50%); /* Показываем только левую половину */
 }
 
-.slider-handle {
+.example__slider-handle {
   position: absolute;
   top: 0;
   left: 49.5%;
-  width: 5px; /* Ширина линии слайдера */
+  width: 4px; /* Ширина линии слайдера */
   height: 100%;
   border-radius: 2px;
   background-color: #666666; /* Цвет линии слайдера */
@@ -297,7 +291,7 @@
     width: 24px;
     height: 18px;
     display: block;
-    mask-image: url("../../icons/slider-handle.svg");
+    mask-image: url("../../icons/example__slider-handle.svg");
     background-color: #666666;
   }
 

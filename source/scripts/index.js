@@ -1,57 +1,21 @@
 //скрипт для бургер-меню
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+const navMain = document.querySelector('.header__nav');
+const navToggle = document.querySelector('.header__nav-toggle');
 
-navMain.classList.remove('main-nav--nojs');
+navMain.classList.remove('header__nav--nojs');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
+  if (navMain.classList.contains('header__nav--closed')) {
+    navMain.classList.remove('header__nav--closed');
+    navMain.classList.add('header__nav--opened');
   } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
+    navMain.classList.add('header__nav--closed');
+    navMain.classList.remove('header__nav--opened');
   }
 });
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// const container = document.querySelector('.slider-container');
-// const line = document.querySelector('.slider-line');
-// const image2 = document.querySelectorAll('.slider-image')[1];
-
-// let isResizing = false;
-
-// line.addEventListener('mousedown', (e) => {
-//   isResizing = true;
-//   e.preventDefault();
-// });
-
-// document.addEventListener('mousemove', (e) => {
-//   if (!isResizing) {
-//     return;
-//   }
-
-//   const containerRect = container.getBoundingClientRect();
-//   const x = Math.max(0, Math.min(e.clientX - containerRect.left, containerRect.width));
-//   const percent = (x / containerRect.width) * 100;
-
-//   line.style.left = `${percent}%`;
-//   image2.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-// });
-
-// document.addEventListener('mouseup', () => {
-//   isResizing = false;
-// });
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
-//скрипт для слайдера главной страницы
-
-
-const slider = document.getElementById('slider-handle');
+//скрипт для слайдера
+const slider = document.getElementById('slider-line');
 const imageRight = document.querySelector('.example__image--before');
 
 let isDragging = false;

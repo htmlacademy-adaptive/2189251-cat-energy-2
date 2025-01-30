@@ -9,7 +9,7 @@
 
 .page-footer__container {
 
-  margin: 0;
+  // margin: 0;
   padding: 22px;
   padding-bottom: 53px;
   display: flex;
@@ -18,19 +18,29 @@
   align-items: center;
 
   & > a {
-    padding: 19px 0 15px;
+    padding: 20px 0 15px;
   }
 
   @media (min-width: $tablet-width) {
+    width: 708px;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 31px;
+    padding-top: 21px;
     padding-bottom: 43px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 32px 78px 0;
+    width: 1220px;
+    // margin: 32px 78px 0;
     padding-bottom: 49px;
+    padding-top: 35px;
+  }
+}
+
+.page-footer__invite-wrapper {
+  @media (min-width: $desktop-width) {
+    position: relative;
   }
 }
 
@@ -70,7 +80,7 @@
     font-size: 16px;
     line-height: 20px;
     padding: 0;
-    justify-content: unset;
+    justify-content: right;
     gap: 22px;
   }
 
