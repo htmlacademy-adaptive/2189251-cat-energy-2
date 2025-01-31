@@ -220,3 +220,7 @@
 .header__nav li:hover::after {
   transform: scaleX(1);
 }
+
+.active a.header__nav-link:hover {
+  cursor: default;
+}
