@@ -45,3 +45,15 @@ document.addEventListener('mouseup', () => {
   isDragging = false;
   document.body.style.cursor = 'default';
 });
+
+//
+document.addEventListener('DOMContentLoaded', () => {
+  const iframe = document.getElementById('yandex-map');
+  iframe.src = 'https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor';
+  iframe.style.display = 'block';
+
+  const noscript = document.querySelector('map__image');
+  if (noscript) {
+    noscript.style.display = 'none';
+  }
+});
