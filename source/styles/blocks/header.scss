@@ -89,7 +89,6 @@
   }
 }
 
-
 .header__nav--closed .header__nav-toggle::before {
   content: "";
   position: absolute;
@@ -141,7 +140,7 @@
   @media (max-width: $mobile-width) {
     .header__nav--opened & {
       position: absolute;
-      width: 320px;
+      width: 280px;
       top: 64px;
       background-color: #ffffff;
       font-size: 20px;
@@ -223,4 +222,20 @@
 
 .active a.header__nav-link:hover {
   cursor: default;
+}
+
+// Мобильное меню без JS , добавлен класс "header__nav--nojs", нет необходимости в классе "header__nav--closed"
+@media (max-width: $mobile-width) {
+  .header__nav.header__nav--nojs {
+
+    display: block;
+
+    .header__nav-toggle {
+      display: none;
+    }
+
+    .header__nav-list {
+      position: static;
+    }
+  }
 }
