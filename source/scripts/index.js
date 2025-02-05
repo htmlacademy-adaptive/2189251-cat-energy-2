@@ -1,5 +1,6 @@
-//скрипт для бургер-меню
-const navMain = document.querySelector('.header__nav');
+// Cкрипт для бургер-меню. Отключен для демонстрации мобильного меню без JS.
+
+/*const navMain = document.querySelector('.header__nav');
 const navToggle = document.querySelector('.header__nav-toggle');
 
 navMain.classList.remove('header__nav--nojs');
@@ -12,7 +13,7 @@ navToggle.addEventListener('click', () => {
     navMain.classList.add('header__nav--closed');
     navMain.classList.remove('header__nav--opened');
   }
-});
+});*/
 
 //скрипт для слайдера
 const slider = document.getElementById('slider-line');

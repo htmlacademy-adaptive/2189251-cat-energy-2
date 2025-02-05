@@ -36,9 +36,9 @@
 .main-catalog__basic-title {
   @include title-simple;
   margin-top: 27px;
-  margin-bottom: 30px;
-  margin-left: 39px;
-  width: 320px;
+  // margin-bottom: 30px;
+  // margin-left: 39px;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
