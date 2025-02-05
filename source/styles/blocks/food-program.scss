@@ -369,13 +369,12 @@ h2.food-program__type-title {
 
   margin: 0;
   padding: 0;
-  padding-left: 20px;
+  // padding-left: 20px;
   color: #444444;
   list-style: none;
   display: flex;
   width: 280px;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
 
   @media (min-width: $tablet-width) {
@@ -387,9 +386,9 @@ h2.food-program__type-title {
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
+    grid-template-columns: 324px 325px 325px 250px;
     width: 1224px;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: flex-start;
     gap: 0;
     counter-reset: num;
@@ -420,17 +419,19 @@ h2.food-program__type-title {
 
 .food-program__description-item {
   @include text;
-  padding: 0 20px 0 80px;
+  padding: 0 0 0 80px;
   position: relative;
   list-style: none;
-  width: 300px;
+  width: 280px;
   min-height: 60px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     min-height: 280px;
     width: 230px;
+    padding: 0;
   }
 }
 
@@ -438,12 +439,9 @@ h2.food-program__type-title {
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    z-index: 10;
-    top: 117px;
-    left: 0;
     font-size: 16px;
     line-height: 24px;
+    padding: 120px 0 0;
   }
 }
 
@@ -476,12 +474,18 @@ p.food-program__text {
     position: absolute;
     top: -33px;
     right: 5px;
+    z-index: -1;
 
     @include title-simple;
     color: #f2f2f2;
     text-align: center;
     line-height: 280px;
     font-size: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+    left: 110px;
   }
 }
 
@@ -663,7 +667,7 @@ p.food-program__text {
   }
 
   @media (min-width: $desktop-width) {
-    background-image: linear-gradient(to top, #eaeaea 75%, transparent 75%);
+    background-image: linear-gradient(to bottom, transparent 155px, #eaeaea 155px);
     margin-top: 0;
     padding-bottom: 17px;
   }

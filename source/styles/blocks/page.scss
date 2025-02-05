@@ -21,3 +21,8 @@
 .page__footer {
   width: 100%;
 }
+
+.page__main .page-main__section {
+  min-height: min-content;
+  max-height: 100vh;
+}

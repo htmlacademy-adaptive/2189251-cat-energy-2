@@ -2,10 +2,6 @@
 .example .container {
   padding: 25px 0 40px;
 
-  // @media (min-width: $tablet-width) {
-
-  // }
-
   @media (min-width: $desktop-width) {
     padding: 0;
   }
@@ -15,7 +11,7 @@
   @media (min-width: $tablet-width) {
 
     border-top: 1px solid #e6e6e6;
-    height: 1081px;
+    min-height: 1081px;
     margin: 0;
   }
 
@@ -23,7 +19,7 @@
 
     border-top: none;
     display: grid;
-    height: 600px;
+    min-height: 600px;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
@@ -38,9 +34,6 @@
 
     margin-bottom: 0;
   }
-
-  // @media (min-width: $desktop-width) {
-  // }
 }
 
 .example__title {
@@ -59,10 +52,6 @@
     padding-bottom: 60px;
     padding-top: 20px;
   }
-
-  // @media (min-width: $desktop-width) {
-
-  // }
 }
 
 .example__text {
